@@ -140,9 +140,9 @@
     <input class="form-control" type="text"  name={field.code} placeholder="Professional qualification">
   </div>
   {/if}
-  
-  
 {/each}
+  
+  
     <div class="form-group">
       <label>
         <input type="checkbox" bind:checked={receiveUpdatesByEmail}> I am happy to receive updates by Email.
