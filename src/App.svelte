@@ -52,8 +52,8 @@
     {#each fields as field (field.code)}
     {#if field.code === 'CV'}
     <div class="form-group">
-      <label for="cvResume">{field.label}</label>
-      <input class="form-control-file" type="file"  name={field.code} accept=".pdf,.doc,.docx" >
+      <h4>{field.label}</h4>
+      <input class="form-control-file w-100" type="file"  name={field.code} accept=".pdf,.doc,.docx" >
     </div>
   {/if}
   {#if field.code === 'EMAIL'}
@@ -86,13 +86,13 @@
     <input class="form-control" type="text"  name={field.code} placeholder="languages">
   </div>
   {/if}
-  {#if field.code==='weav04e7bf4b25574e419d7a36399d579c86'}
+  {#if field.name==='Experience'}
   <div class="form-group">
     <label for="Experince">{field.label}</label>
     <input class="form-control" type="text"  name={field.code} placeholder="Experince">
   </div>
   {/if}
-  {#if field.code==='weava647dfe7b2c44d7cbf1be28e231018d1'}
+  {#if field.name==='DOB'}
   <div class="form-group">
     <label for="Date of birth">{field.label}</label>
     <input class="form-control" type="Date"  name={field.code} placeholder="Date of Birth">
@@ -161,4 +161,3 @@
     <button class="btn btn-primary" type="submit">Submit</button>
   </form>
 {/if}
-
