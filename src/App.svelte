@@ -3,9 +3,13 @@
   import 'bootstrap/dist/css/bootstrap.min.css';
 
   let fields = [];
-  let formId = '';
+  
   let currentURL = '';
   let stringAfterLastSlash = '';
+  let receiveUpdatesByEmail = false;
+  let receiveUpdatesBySMS = false;
+  let acceptPrivacyPolicy = false;
+
 
   function extractStringAfterLastSlash(url) {
     const lastIndex = url.lastIndexOf('/');
@@ -112,8 +116,18 @@
     <input class="form-control" type="text"  name={field.code} placeholder="Rating">
   </div>
   {/if}
- 
- 
+  {#if field.name==='Gender'}
+  <div class="form-group">
+    <label for="gender">{field.label}</label>
+    <input class="form-control" type="text"  id="gender" name={field.code} placeholder="Gender" >
+    </div>
+  {/if}
+  {#if field.name==='INDUSTRY'}
+  <div class="form-group">
+    <label for="industry">{field.label}</label>
+    <input class="form-control" type="text"  name={field.code} placeholder="Industry" >
+    </div>
+  {/if}
   {#if field.name === 'Language Level'}
   <div class="form-group">
     <label for="Languages Level">{field.label}</label>
@@ -122,7 +136,22 @@
   {/if}
   
   
-    {/each}
+{/each}
+    <div class="form-group">
+      <label>
+        <input type="checkbox" bind:checked={receiveUpdatesByEmail}> I am happy to receive updates by Email.
+      </label>
+    </div>
+    <div class="form-group">
+      <label>
+        <input type="checkbox" bind:checked={receiveUpdatesBySMS}> I am happy to receive updates by SMS.
+      </label>
+    </div>
+    <div class="form-group">
+      <label>
+        <input type="checkbox" bind:checked={acceptPrivacyPolicy}> Click here to indicate that you have read and accept the privacy policy of HireOptica.
+      </label>
+    </div>
     <button class="btn btn-primary" type="submit">Submit</button>
   </form>
 {/if}
