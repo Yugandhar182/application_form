@@ -76,7 +76,7 @@
   {/if}
   {#if field.code === 'FULL_NAME'}
     <div class="form-group">
-      <label for=" Enter FullName">{field.label}</label>
+      <label for=" Enter FullName" >{field.label}</label>
       <input class="form-control" type="text"  name={field.code} placeholder="Enter Your FullName">
     </div>
   {/if}
@@ -132,6 +132,12 @@
   <div class="form-group">
     <label for="Languages Level">{field.label}</label>
     <input class="form-control" type="text"  name={field.code} placeholder="Languages Level">
+  </div>
+  {/if}
+  {#if field.name === 'Professional qualification'}
+  <div class="form-group">
+    <label for="Professional qualification">{field.label}</label>
+    <input class="form-control" type="text"  name={field.code} placeholder="Professional qualification">
   </div>
   {/if}
   
