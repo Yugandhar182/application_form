@@ -42,17 +42,17 @@
 
 <style>
   .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 </style>
 
 {#if fields.length > 0}
-  <h2>Form Fields:</h2>
+<h1 style="color:blue;">Candidate Details</h1>
   <form>
     {#each fields as field (field.code)}
     {#if field.code === 'CV'}
     <div class="form-group">
-     <label for="CV">{field.label}</label>
+      <label for="CV">{field.label}</label>
       <input class="form-control-file w-100" type="file"  name={field.code} accept=".pdf,.doc,.docx" >
     </div>
   {/if}
