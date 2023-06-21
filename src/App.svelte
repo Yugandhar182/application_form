@@ -52,7 +52,7 @@
     {#each fields as field (field.code)}
     {#if field.code === 'CV'}
     <div class="form-group">
-      <h4>{field.label}</h4>
+     <label for="CV">{field.label}</label>
       <input class="form-control-file w-100" type="file"  name={field.code} accept=".pdf,.doc,.docx" >
     </div>
   {/if}
